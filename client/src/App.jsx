@@ -1,5 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home.jsx'
+import About from './pages/About.jsx'
 
 function Nav() {
   const [open, setOpen] = useState(false)
@@ -372,21 +375,9 @@ function Footer() {
 
 export default function App() {
   return (
-    <div>
-      <Hero />
-      <main className="mx-auto max-w-7xl px-2 md:px-4">
-        <div className="space-y-6">
-          <Services />
-          <CaseStudies />
-          <MapStats />
-          <Team />
-          <Testimonials />
-          <Insights />
-          <FAQ />
-          <CTA />
-        </div>
-      </main>
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
   )
 }
