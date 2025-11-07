@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <section className="w-full px-0 py-8 md:py-12">
+    <section className="w-full px-0 pt-0 pb-10 md:pb-12">
       <div className="relative overflow-hidden rounded-none border-0 bg-zinc-950 text-zinc-50">
         {/* in-card nav */}
         <div className="px-4 md:px-8 pt-4 md:pt-6">
@@ -27,7 +27,7 @@ export default function Hero() {
         </div>
 
         {/* decorative bg */}
-        <div className="pointer-events-none absolute inset-0 [background-image:radial-gradient(80%_60%_at_0%_0%,rgba(16,185,129,.18),transparent_60%),radial-gradient(60%_50%_at_100%_0%,rgba(16,185,129,.10),transparent_65%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_60%_at_0%_0%,rgba(16,185,129,.18),transparent_60%),radial-gradient(60%_50%_at_100%_0%,rgba(16,185,129,.10),transparent_65%)]" />
 
         {/* content */}
         <div className="relative px-4 md:px-8 pb-6 md:pb-10">
