@@ -43,7 +43,7 @@ function Nav() {
 function Hero() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-8 md:py-12">
-      <div className="relative overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-950 text-zinc-50">
+      <div className="relative overflow-hidden rounded-[28px] border border-zinc-800 bg-zinc-950 text-zinc-50">
         {/* in-card nav */}
         <div className="px-4 md:px-8 pt-4 md:pt-6">
           <div className="flex items-center justify-between">
@@ -66,8 +66,11 @@ function Hero() {
           </div>
         </div>
 
+        {/* decorative bg */}
+        <div className="pointer-events-none absolute inset-0 [background-image:radial-gradient(80%_60%_at_0%_0%,rgba(16,185,129,.18),transparent_60%),radial-gradient(60%_50%_at_100%_0%,rgba(16,185,129,.10),transparent_65%)]" />
+
         {/* content */}
-        <div className="px-4 md:px-8 pb-6 md:pb-10">
+        <div className="relative px-4 md:px-8 pb-6 md:pb-10">
           <div className="grid md:grid-cols-2 gap-6 items-center">
             {/* text */}
             <div className="py-4 md:py-8">
@@ -84,15 +87,15 @@ function Hero() {
                   Watch Demo
                 </a>
               </div>
-              {/* doodle */}
-              <div className="mt-6 flex items-center gap-3 text-xs text-zinc-300">
-                <svg width="80" height="40" viewBox="0 0 80 40" fill="none" stroke="currentColor" className="opacity-60"><path d="M2 30 C20 10, 60 10, 78 30" strokeWidth="1.5"/></svg>
-                <span className="italic">Let’s start your journey here!</span>
-              </div>
             </div>
 
             {/* mosaic */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="relative grid grid-cols-2 gap-4">
+              {/* doodle near mosaic */}
+              <div className="absolute -top-6 left-1 flex items-center gap-2 text-xs text-zinc-300">
+                <svg width="80" height="36" viewBox="0 0 80 36" fill="none" stroke="currentColor" className="opacity-70"><path d="M2 28 C26 6, 54 6, 78 24" strokeWidth="1.5"/></svg>
+                <span className="italic">Let’s start your journey here!</span>
+              </div>
               <img className="rounded-2xl border border-zinc-800 aspect-4/3 object-cover" src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1200&auto=format&fit=crop" alt="mosaic 1" />
               <img className="rounded-2xl border border-zinc-800 aspect-4/3 object-cover" src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" alt="mosaic 2" />
               <img className="rounded-2xl border border-zinc-800 aspect-4/3 object-cover" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200&auto=format&fit=crop" alt="mosaic 3" />
