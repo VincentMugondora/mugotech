@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 function Nav() {
   return (
-    <header className="sticky top-0 z-20 backdrop-blur supports-[backdrop-filter]:bg-white/60 bg-white/70 border-b border-zinc-200/70">
+    <header className="sticky top-0 z-20 backdrop-blur supports-backdrop-filter:bg-white/60 bg-white/70 border-b border-zinc-200/70">
       <div className="mx-auto max-w-6xl px-4">
         <div className="flex items-center justify-between h-14">
           <a href="#" className="flex items-center gap-2 font-extrabold text-lg">
@@ -43,10 +43,10 @@ function Hero() {
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4">
-          <img className="card aspect-[4/3] object-cover w-full" src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1200&auto=format&fit=crop" alt="marketing 1" />
-          <img className="card aspect-[4/3] object-cover w-full" src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" alt="marketing 2" />
-          <img className="card aspect-[4/3] object-cover w-full" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200&auto=format&fit=crop" alt="marketing 3" />
-          <img className="card aspect-[4/3] object-cover w-full" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="marketing 4" />
+          <img className="card aspect-4/3 object-cover w-full" src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1200&auto=format&fit=crop" alt="marketing 1" />
+          <img className="card aspect-4/3 object-cover w-full" src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" alt="marketing 2" />
+          <img className="card aspect-4/3 object-cover w-full" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200&auto=format&fit=crop" alt="marketing 3" />
+          <img className="card aspect-4/3 object-cover w-full" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="marketing 4" />
         </div>
       </div>
     </section>
@@ -108,7 +108,7 @@ function CaseStudies() {
 function MapStats() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-10">
-      <div className="card p-6 bg-gradient-to-br from-emerald-600/10 to-white relative overflow-hidden">
+      <div className="card p-6 bg-linear-to-br from-emerald-600/10 to-white relative overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <h3 className="text-xl font-semibold">We work with clients around the world</h3>
