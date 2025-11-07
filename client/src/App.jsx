@@ -42,7 +42,7 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-8 md:py-12">
+    <section className="w-full px-0 py-8 md:py-12">
       <div className="relative overflow-hidden rounded-[28px] border border-zinc-800 bg-zinc-950 text-zinc-50">
         {/* in-card nav */}
         <div className="px-4 md:px-8 pt-4 md:pt-6">
@@ -373,9 +373,9 @@ function Footer() {
 export default function App() {
   return (
     <div>
+      <Hero />
       <main className="mx-auto max-w-7xl px-2 md:px-4">
         <div className="space-y-6">
-          <Hero />
           <Services />
           <CaseStudies />
           <MapStats />
