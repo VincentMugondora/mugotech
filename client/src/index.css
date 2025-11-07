@@ -7,7 +7,14 @@
 
 @layer base {
   html { scroll-behavior: smooth; }
-  body { @apply bg-emerald-50/60 text-zinc-900 antialiased; font-family: var(--font-sans); }
+  body {
+    @apply bg-emerald-50/60 text-zinc-900 antialiased;
+    font-family: var(--font-sans);
+    background-color: var(--color-emerald-50);
+    background-image:
+      radial-gradient(70% 60% at 20% -10%, color-mix(in oklch, var(--color-emerald-100) 45%, transparent), transparent 65%),
+      radial-gradient(60% 50% at 80% -10%, color-mix(in oklch, var(--color-emerald-100) 35%, transparent), transparent 70%);
+  }
 }
 
 @layer utilities {
