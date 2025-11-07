@@ -14,7 +14,7 @@
   .card { @apply rounded-2xl border border-zinc-200/70 bg-white shadow-sm; }
   .dark-card { @apply rounded-2xl border border-zinc-800 bg-zinc-900 text-zinc-50 shadow; }
   .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition-colors; }
-  .btn-primary { @apply btn bg-emerald-600 text-white hover:bg-emerald-700; }
-  .btn-ghost { @apply btn bg-transparent text-zinc-900 hover:bg-zinc-100; }
+  .btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition-colors bg-emerald-600 text-white hover:bg-emerald-700; }
+  .btn-ghost { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition-colors bg-transparent text-zinc-900 hover:bg-zinc-100; }
   .badge { @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium bg-emerald-100 text-emerald-700; }
 }
