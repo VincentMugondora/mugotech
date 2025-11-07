@@ -1,6 +1,8 @@
+import React from 'react'
 import { useState } from 'react'
 
 function Nav() {
+  const [open, setOpen] = useState(false)
   return (
     <header className="sticky top-0 z-20 backdrop-blur supports-backdrop-filter:bg-white/60 bg-white/70 border-b border-zinc-200/70">
       <div className="mx-auto max-w-6xl px-4">
@@ -15,38 +17,97 @@ function Nav() {
             <a className="hover:text-zinc-900" href="#about">About</a>
             <a className="hover:text-zinc-900" href="#blog">Blog</a>
           </nav>
-          <a href="#contact" className="btn-primary">Get a free proposal</a>
+          <div className="flex items-center gap-2">
+            <a href="#contact" className="btn-primary hidden md:inline-flex">Get a free proposal</a>
+            <button className="md:hidden rounded-lg p-2 hover:bg-zinc-100" aria-label="Toggle menu" onClick={() => setOpen(v => !v)}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+          </div>
         </div>
       </div>
+      {open && (
+        <div className="md:hidden bg-white border-t border-zinc-200/70">
+          <nav className="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-3 text-sm">
+            <a className="py-1" href="#services" onClick={() => setOpen(false)}>Services</a>
+            <a className="py-1" href="#work" onClick={() => setOpen(false)}>Work</a>
+            <a className="py-1" href="#about" onClick={() => setOpen(false)}>About</a>
+            <a className="py-1" href="#blog" onClick={() => setOpen(false)}>Blog</a>
+            <a className="btn-primary mt-1" href="#contact" onClick={() => setOpen(false)}>Get a free proposal</a>
+          </nav>
+        </div>
+      )}
     </header>
   )
 }
 
 function Hero() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-10 md:py-14">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="card p-6 md:p-8 bg-zinc-950 text-zinc-50 border-zinc-800">
-          <div className="flex items-center justify-between mb-6">
-            <div className="badge bg-emerald-500/15 text-emerald-400">Digital Marketing</div>
-            <div className="text-xs text-zinc-400">Since 2019</div>
-          </div>
-          <h1 className="text-3xl md:text-4xl font-extrabold leading-tight">
-            Elevate Your Business Through Online Marketing
-          </h1>
-          <p className="mt-4 text-zinc-300">
-            Performance-driven SEO, paid ads, and web experiences that turn visitors into loyal customers.
-          </p>
-          <div className="mt-6 flex flex-wrap items-center gap-3">
-            <a className="btn-primary" href="#contact">Get a Free Proposal</a>
-            <a className="btn-ghost bg-white/5 text-zinc-50 hover:bg-white/10" href="#work">View Case Studies</a>
+    <section className="mx-auto max-w-6xl px-4 py-8 md:py-12">
+      <div className="relative overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-950 text-zinc-50">
+        {/* in-card nav */}
+        <div className="px-4 md:px-8 pt-4 md:pt-6">
+          <div className="flex items-center justify-between">
+            <a href="#" className="flex items-center gap-2 text-sm font-semibold">
+              <span className="inline-grid place-items-center h-7 w-7 rounded-full bg-emerald-600">D</span>
+              <span className="hidden sm:inline">digicraft</span>
+            </a>
+            <nav className="hidden md:flex items-center gap-6 text-sm text-zinc-300">
+              <a className="text-emerald-400" href="#">Home</a>
+              <a className="hover:text-white" href="#about">About</a>
+              <a className="hover:text-white" href="#services">Services</a>
+              <a className="hover:text-white" href="#work">Cases</a>
+            </nav>
+            <div className="flex items-center gap-3">
+              <a href="#contact" className="btn-primary hidden md:inline-flex">Get Started</a>
+              <button className="md:hidden rounded-lg p-2 hover:bg-white/5" aria-label="Menu">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+              </button>
+            </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4">
-          <img className="card aspect-4/3 object-cover w-full" src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1200&auto=format&fit=crop" alt="marketing 1" />
-          <img className="card aspect-4/3 object-cover w-full" src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" alt="marketing 2" />
-          <img className="card aspect-4/3 object-cover w-full" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200&auto=format&fit=crop" alt="marketing 3" />
-          <img className="card aspect-4/3 object-cover w-full" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="marketing 4" />
+
+        {/* content */}
+        <div className="px-4 md:px-8 pb-6 md:pb-10">
+          <div className="grid md:grid-cols-2 gap-6 items-center">
+            {/* text */}
+            <div className="py-4 md:py-8">
+              <h1 className="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight">
+                Elevate Your Business Through Online Marketing
+              </h1>
+              <p className="mt-4 text-zinc-300 max-w-xl">
+                Unlock the full potential of your business with Elevate Your Business through Online Marketing. In this transformative journey, we guide you through the dynamic landscape of digital strategies.
+              </p>
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <a className="btn-primary" href="#contact">Get Started</a>
+                <a className="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold bg-white/5 hover:bg-white/10 text-zinc-50" href="#">
+                  <span className="inline-grid place-items-center h-6 w-6 rounded-full bg-white/10"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                  Watch Demo
+                </a>
+              </div>
+              {/* doodle */}
+              <div className="mt-6 flex items-center gap-3 text-xs text-zinc-300">
+                <svg width="80" height="40" viewBox="0 0 80 40" fill="none" stroke="currentColor" className="opacity-60"><path d="M2 30 C20 10, 60 10, 78 30" strokeWidth="1.5"/></svg>
+                <span className="italic">Let’s start your journey here!</span>
+              </div>
+            </div>
+
+            {/* mosaic */}
+            <div className="grid grid-cols-2 gap-4">
+              <img className="rounded-2xl border border-zinc-800 aspect-4/3 object-cover" src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1200&auto=format&fit=crop" alt="mosaic 1" />
+              <img className="rounded-2xl border border-zinc-800 aspect-4/3 object-cover" src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" alt="mosaic 2" />
+              <img className="rounded-2xl border border-zinc-800 aspect-4/3 object-cover" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200&auto=format&fit=crop" alt="mosaic 3" />
+              <img className="rounded-2xl border border-zinc-800 aspect-4/3 object-cover" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="mosaic 4" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* logos row */}
+      <div className="px-1 md:px-2">
+        <div className="mx-auto max-w-5xl flex items-center justify-center gap-10 md:gap-16 py-6 text-zinc-500">
+          <span className="opacity-70">informa</span>
+          <span className="opacity-70">Microsoft</span>
+          <span className="opacity-70">logitech</span>
         </div>
       </div>
     </section>
@@ -185,6 +246,30 @@ function Testimonials() {
   )
 }
 
+function Insights() {
+  const posts = [
+    { title: 'SEO in 2026: What Changed', img: 'https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?q=80&auto=format&fit=crop&w=1200' },
+    { title: 'Creative that Converts', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&auto=format&fit=crop&w=1200' },
+    { title: 'GA4: Measuring What Matters', img: 'https://images.unsplash.com/photo-1460925895917-4f9f1a2f?ixid=Mnwy&auto=format&fit=crop&w=1200' },
+  ]
+  return (
+    <section id="blog" className="mx-auto max-w-6xl px-4 py-10">
+      <h2 className="text-2xl md:text-3xl font-bold mb-6">Insights & Guides</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {posts.map((p, i) => (
+          <article key={i} className="card overflow-hidden">
+            <img src={p.img} alt="" className="w-full h-40 object-cover" />
+            <div className="p-4">
+              <h3 className="font-semibold">{p.title}</h3>
+              <a className="mt-2 inline-flex text-sm text-emerald-700 hover:underline" href="#">Read article</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  )
+}
+
 function FAQ() {
   const data = [
     { q: 'How quickly can we start?', a: 'Typically within 1–2 weeks after discovery and scope alignment.' },
@@ -244,6 +329,25 @@ function Sidebar() {
           <div className="text-xs text-zinc-600 mt-1">One integrated team.</div>
         </div>
       </div>
+      <div className="dark-card p-6">
+        <div className="text-lg font-semibold">Free Marketing Playbook</div>
+        <p className="text-sm text-zinc-400 mt-1">20 pages of proven growth tactics.</p>
+        <a className="btn-primary mt-4 w-full" href="#">Download</a>
+      </div>
+      <div className="card overflow-hidden">
+        <img className="w-full h-32 object-cover" src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&auto=format&fit=crop&w=1200" alt="mini post" />
+        <div className="p-4">
+          <div className="text-sm font-medium">How we scaled a DTC brand 3.2x</div>
+          <a className="mt-2 inline-flex text-xs text-emerald-700 hover:underline" href="#">Read case</a>
+        </div>
+      </div>
+      <div className="card p-5 flex items-center gap-3">
+        <img className="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&auto=format&fit=crop&w=200" alt="person" />
+        <div className="min-w-0">
+          <div className="text-sm font-medium truncate">Talk to Victor — Growth Lead</div>
+          <a className="text-xs text-emerald-700 hover:underline" href="#contact">Book a call</a>
+        </div>
+      </div>
     </aside>
   )
 }
@@ -266,7 +370,6 @@ function Footer() {
 export default function App() {
   return (
     <div>
-      <Nav />
       <main className="mx-auto max-w-7xl px-2 md:px-4">
         <div className="grid grid-cols-1 xl:grid-cols-[1fr_320px] gap-6">
           <div>
@@ -276,6 +379,7 @@ export default function App() {
             <MapStats />
             <Team />
             <Testimonials />
+            <Insights />
             <FAQ />
             <CTA />
           </div>
