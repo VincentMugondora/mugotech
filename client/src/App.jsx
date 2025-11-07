@@ -43,7 +43,7 @@ function Nav() {
 function Hero() {
   return (
     <section className="w-full px-0 py-8 md:py-12">
-      <div className="relative overflow-hidden rounded-[28px] border border-zinc-800 bg-zinc-950 text-zinc-50">
+      <div className="relative overflow-hidden rounded-none border-0 bg-zinc-950 text-zinc-50">
         {/* in-card nav */}
         <div className="px-4 md:px-8 pt-4 md:pt-6">
           <div className="flex items-center justify-between">
