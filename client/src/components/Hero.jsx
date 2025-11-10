@@ -38,10 +38,22 @@ export default function Hero() {
                 <svg width="80" height="36" viewBox="0 0 80 36" fill="none" stroke="currentColor" className="opacity-70"><path d="M2 28 C26 6, 54 6, 78 24" strokeWidth="1.5"/></svg>
                 <span className="italic">Let’s start your journey here!</span>
               </div>
-              <img className="rounded-2xl border border-zinc-800 aspect-4/3 object-cover shadow-[0_10px_30px_rgba(0,0,0,0.45)]" src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1200&auto=format&fit=crop" alt="mosaic 1" />
-              <img className="rounded-2xl border border-zinc-800 aspect-4/3 object-cover shadow-[0_10px_30px_rgba(0,0,0,0.45)]" src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" alt="mosaic 2" />
-              <img className="rounded-2xl border border-zinc-800 aspect-4/3 object-cover shadow-[0_10px_30px_rgba(0,0,0,0.45)]" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200&auto=format&fit=crop" alt="mosaic 3" />
-              <img className="rounded-2xl border border-zinc-800 aspect-4/3 object-cover shadow-[0_10px_30px_rgba(0,0,0,0.45)]" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="mosaic 4" />
+              <div className="relative rounded-2xl border border-zinc-800 overflow-hidden aspect-4/3 shadow-[0_10px_30px_rgba(0,0,0,0.45)]">
+                <img className="h-full w-full object-cover" src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1200&auto=format&fit=crop" alt="mosaic 1" />
+                <div className="absolute inset-0 bg-black/25" />
+              </div>
+              <div className="relative rounded-2xl border border-zinc-800 overflow-hidden aspect-4/3 shadow-[0_10px_30px_rgba(0,0,0,0.45)]">
+                <img className="h-full w-full object-cover" src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" alt="mosaic 2" />
+                <div className="absolute inset-0 bg-black/25" />
+              </div>
+              <div className="relative rounded-2xl border border-zinc-800 overflow-hidden aspect-4/3 shadow-[0_10px_30px_rgba(0,0,0,0.45)]">
+                <img className="h-full w-full object-cover" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200&auto=format&fit=crop" alt="mosaic 3" />
+                <div className="absolute inset-0 bg-black/25" />
+              </div>
+              <div className="relative rounded-2xl border border-zinc-800 overflow-hidden aspect-4/3 shadow-[0_10px_30px_rgba(0,0,0,0.45)]">
+                <img className="h-full w-full object-cover" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="mosaic 4" />
+                <div className="absolute inset-0 bg-black/20" />
+              </div>
             </div>
           </div>
         </div>
