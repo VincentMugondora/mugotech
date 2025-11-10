@@ -9,9 +9,10 @@ export default function Hero() {
 
         {/* decorative bg */}
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_60%_at_0%_0%,rgba(16,185,129,.18),transparent_60%),radial-gradient(60%_50%_at_100%_0%,rgba(16,185,129,.10),transparent_65%)]" />
+        <div className="absolute -bottom-12 -right-12 h-28 w-28 sm:h-36 sm:w-36 rounded-tl-[160px] bg-white z-10" />
 
         {/* content */}
-        <div className="relative px-4 md:px-8 pb-6 md:pb-10">
+        <div className="relative z-20 px-4 md:px-8 pb-6 md:pb-10">
           <div className="grid md:grid-cols-2 gap-6 items-center">
             {/* text */}
             <div className="py-4 md:py-8">
@@ -31,16 +32,16 @@ export default function Hero() {
             </div>
 
             {/* mosaic */}
-            <div className="relative grid grid-cols-2 gap-4">
+            <div className="relative z-20 grid grid-cols-2 gap-3 sm:gap-4">
               {/* doodle near mosaic */}
               <div className="absolute -top-6 left-1 flex items-center gap-2 text-xs text-zinc-300">
                 <svg width="80" height="36" viewBox="0 0 80 36" fill="none" stroke="currentColor" className="opacity-70"><path d="M2 28 C26 6, 54 6, 78 24" strokeWidth="1.5"/></svg>
                 <span className="italic">Let’s start your journey here!</span>
               </div>
-              <img className="rounded-2xl border border-zinc-800 aspect-4/3 object-cover" src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1200&auto=format&fit=crop" alt="mosaic 1" />
-              <img className="rounded-2xl border border-zinc-800 aspect-4/3 object-cover" src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" alt="mosaic 2" />
-              <img className="rounded-2xl border border-zinc-800 aspect-4/3 object-cover" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200&auto=format&fit=crop" alt="mosaic 3" />
-              <img className="rounded-2xl border border-zinc-800 aspect-4/3 object-cover" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="mosaic 4" />
+              <img className="rounded-2xl border border-zinc-800 aspect-4/3 object-cover shadow-[0_10px_30px_rgba(0,0,0,0.45)]" src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1200&auto=format&fit=crop" alt="mosaic 1" />
+              <img className="rounded-2xl border border-zinc-800 aspect-4/3 object-cover shadow-[0_10px_30px_rgba(0,0,0,0.45)]" src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" alt="mosaic 2" />
+              <img className="rounded-2xl border border-zinc-800 aspect-4/3 object-cover shadow-[0_10px_30px_rgba(0,0,0,0.45)]" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200&auto=format&fit=crop" alt="mosaic 3" />
+              <img className="rounded-2xl border border-zinc-800 aspect-4/3 object-cover shadow-[0_10px_30px_rgba(0,0,0,0.45)]" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="mosaic 4" />
             </div>
           </div>
         </div>
