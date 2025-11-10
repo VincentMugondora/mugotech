@@ -61,7 +61,7 @@ const HeroSection = () => {
               className="object-cover w-full h-44 md:h-[40vh] rounded-2xl"
             />
           </div>
-          <div className="relative z-10 rounded-2xl overflow-hidden -mt-0 md:-mt-[10vh]">
+          <div className="relative z-10 rounded-2xl overflow-hidden mt-0 md:-mt-[10vh]">
             <img
               src="https://images.unsplash.com/photo-1553877522-43269d4ea984"
               alt="Laptop"
