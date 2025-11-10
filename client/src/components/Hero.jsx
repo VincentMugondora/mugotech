@@ -12,11 +12,10 @@ const HeroSection = () => {
       <div className="flex flex-col relative
       h-[90vh] md:flex-row justify-between items-center px-10 md:px-20 py-16">
         {/* decorative glow and cut-out */}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_60%_at_0%_0%,rgba(16,185,129,.18),transparent_60%),radial-gradient(60%_50%_at_100%_0%,rgba(16,185,129,.10),transparent_65%)]" />
         {/* Left Text Section */}
         <div className="relative z-10 max-w-xl space-y-6">
-          <h1 className="text-4xl md:text-7xl font-extrabold leading-tight">
-            Elevate Your Business <br /> Through Online Marketing
+          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+            Elevate Your Business Through Online Marketing
           </h1>
           <p className="text-gray-400">
             Unlock the full potential of your business with Elevate Your Business through 
@@ -38,13 +37,14 @@ const HeroSection = () => {
 
         {/* Right Image Section */}
         <div className="relative z-10 mt-12 md:mt-48 md:w-1/2 grid grid-cols-2 gap-4 pl-0 ml-0 justify-start">
+          {/* top shadow coming from navbar */}
+          <div className="pointer-events-none absolute -top-8 left-0 right-0 h-28 md:h-44 bg-linear-to-b from-black via-black/80 to-transparent"></div>
           <div className="relative rounded-lg overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
               alt="Team work"
               className="object-cover w-full h-[60vh]"
             />
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-[80%] bg-linear-to-b from-black via-black/90 to-transparent"></div>
           </div>
           <div className="relative rounded-lg overflow-hidden">
             <img
@@ -52,7 +52,6 @@ const HeroSection = () => {
               alt="Meeting"
               className="object-cover w-full h-[50vh]"
             />
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-[80%] bg-linear-to-b from-black via-black/90 to-transparent"></div>
           </div>
           <div className="relative rounded-lg overflow-hidden">
             <img
@@ -60,7 +59,6 @@ const HeroSection = () => {
               alt="Laptop"
               className="object-cover w-full h-[60vh]"
             />
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-[80%] bg-linear-to-b from-black via-black/90 to-transparent"></div>
           </div>
           <div className="relative rounded-lg overflow-hidden -mt-[10vh]">
             <img
@@ -68,7 +66,6 @@ const HeroSection = () => {
               alt="Laptop"
               className="object-cover w-full h-[60vh]"
             />
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-[80%] bg-linear-to-b from-black via-black/90 to-transparent"></div>
           </div>
         </div>
       </div>
