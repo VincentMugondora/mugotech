@@ -38,7 +38,7 @@ const HeroSection = () => {
         {/* Right Image Section */}
         <div className="relative z-0 mt-20 md:mt-48 md:w-1/2 grid grid-cols-2 gap-4 pl-0 ml-0 justify-start">
           {/* top shadow coming from navbar */}
-          <div className="pointer-events-none absolute -top-10 left-0 right-0 h-28 md:h-48 z-20 bg-linear-to-b from-[#111111]/85 via-[#111111]/30 to-transparent"></div>
+          <div className="pointer-events-none absolute -top-10 left-0 right-0 h-28 md:h-48 z-20 bg-gradient-to-b from-[#111111]/85 via-[#111111]/30 to-transparent"></div>
           <div className="relative z-10 rounded-lg overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
