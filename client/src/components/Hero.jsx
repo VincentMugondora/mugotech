@@ -1,28 +1,22 @@
 import React from "react";
 import { FaPlay } from "react-icons/fa";
+import Navbar from "./Navbar";
 
 const HeroSection = () => {
   return (
     <section className="bg-[#0b0c10] text-white min-h-screen flex flex-col justify-between">
       {/* Navbar */}
-      <nav className="flex justify-between items-center px-10 py-6">
-        <div className="text-2xl font-bold text-green-400">Dgicraft</div>
-        <ul className="hidden md:flex space-x-8 text-gray-300">
-          <li><a href="#" className="hover:text-white">Home</a></li>
-          <li><a href="#" className="hover:text-white">About</a></li>
-          <li><a href="#" className="hover:text-white">Services</a></li>
-          <li><a href="#" className="hover:text-white">Cases</a></li>
-        </ul>
-        <button className="bg-green-400 hover:bg-green-500 text-black px-5 py-2 rounded-md font-semibold">
-          Get Started
-        </button>
-      </nav>
+      <Navbar />
 
       {/* Hero Content */}
-      <div className="flex flex-col md:flex-row justify-between items-center px-10 md:px-20 py-16">
+      <div className="flex flex-col relative
+      h-[90vh] md:flex-row justify-between items-center px-10 md:px-20 py-16">
+        {/* decorative glow and cut-out */}
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_60%_at_0%_0%,rgba(16,185,129,.18),transparent_60%),radial-gradient(60%_50%_at_100%_0%,rgba(16,185,129,.10),transparent_65%)]" />
+        <div className="absolute -bottom-10 -right-6 h-16 w-28 sm:h-20 sm:w-40 rounded-tl-[160px] bg-white" />
         {/* Left Text Section */}
-        <div className="max-w-xl space-y-6">
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+        <div className="relative z-10 max-w-xl space-y-6">
+          <h1 className="text-4xl md:text-7xl font-extrabold leading-tight">
             Elevate Your Business <br /> Through Online Marketing
           </h1>
           <p className="text-gray-400">
@@ -33,10 +27,10 @@ const HeroSection = () => {
           </p>
 
           <div className="flex items-center space-x-4">
-            <button className="bg-green-400 hover:bg-green-500 text-black px-5 py-3 rounded-md font-semibold">
+            <button className="bg-green-400 hover:bg-green-500 text-black px-6 py-3 rounded-full font-semibold">
               Get Started
             </button>
-            <button className="flex items-center space-x-2 border border-gray-500 px-5 py-3 rounded-md hover:bg-gray-800">
+            <button className="flex items-center space-x-2 border border-gray-600 px-5 py-3 rounded-xl hover:bg-white/5">
               <FaPlay className="text-green-400" />
               <span>Watch Demo</span>
             </button>
@@ -48,27 +42,49 @@ const HeroSection = () => {
         </div>
 
         {/* Right Image Section */}
-        <div className="mt-10 md:mt-0 md:w-1/2 grid grid-cols-2 gap-4">
-          <img
-            src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
-            alt="Team work"
-            className="rounded-lg object-cover w-full h-56"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
-            alt="Meeting"
-            className="rounded-lg object-cover w-full h-56"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1553877522-43269d4ea984"
-            alt="Laptop"
-            className="rounded-lg object-cover w-full h-56 col-span-2"
-          />
+        <div className="relative z-10 mt-12 md:mt-48 md:w-1/2 grid grid-cols-2 gap-4">
+          {/* doodle near mosaic */}
+          <div className="absolute -top-8 left-2 flex items-center gap-2 text-xs text-zinc-300">
+            <svg width="80" height="36" viewBox="0 0 80 36" fill="none" stroke="currentColor" className="opacity-70"><path d="M2 28 C26 6, 54 6, 78 24" strokeWidth="1.5"/></svg>
+            <span className="italic">Let’s start your journey here!</span>
+          </div>
+          <div className="relative rounded-lg overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+              alt="Team work"
+              className="object-cover w-full h-[60vh]"
+            />
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-[80%] bg-linear-to-b from-black via-black/90 to-transparent"></div>
+          </div>
+          <div className="relative rounded-lg overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+              alt="Meeting"
+              className="object-cover w-full h-[50vh]"
+            />
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-[80%] bg-linear-to-b from-black via-black/90 to-transparent"></div>
+          </div>
+          <div className="relative rounded-lg overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984"
+              alt="Laptop"
+              className="object-cover w-full h-[60vh]"
+            />
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-[80%] bg-linear-to-b from-black via-black/90 to-transparent"></div>
+          </div>
+          <div className="relative rounded-lg overflow-hidden -mt-[10vh]">
+            <img
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984"
+              alt="Laptop"
+              className="object-cover w-full h-[60vh]"
+            />
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-[80%] bg-linear-to-b from-black via-black/90 to-transparent"></div>
+          </div>
         </div>
       </div>
 
       {/* Logos Section */}
-      <div className="flex justify-center space-x-12 py-8 bg-[#101218] text-gray-400">
+      <div className="flex justify-start space-x-12 py-8 px-10 md:px-20 text-gray-400">
         <span className="text-lg">informa</span>
         <span className="text-lg">Microsoft</span>
         <span className="text-lg">logitech</span>
