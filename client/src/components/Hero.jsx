@@ -13,7 +13,6 @@ const HeroSection = () => {
       h-[90vh] md:flex-row justify-between items-center px-10 md:px-20 py-16">
         {/* decorative glow and cut-out */}
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_60%_at_0%_0%,rgba(16,185,129,.18),transparent_60%),radial-gradient(60%_50%_at_100%_0%,rgba(16,185,129,.10),transparent_65%)]" />
-        <div className="absolute -bottom-10 -right-6 h-16 w-28 sm:h-20 sm:w-40 rounded-tl-[160px] bg-white" />
         {/* Left Text Section */}
         <div className="relative z-10 max-w-xl space-y-6">
           <h1 className="text-4xl md:text-7xl font-extrabold leading-tight">
@@ -42,7 +41,7 @@ const HeroSection = () => {
         </div>
 
         {/* Right Image Section */}
-        <div className="relative z-10 mt-12 md:mt-48 md:w-1/2 grid grid-cols-2 gap-4">
+        <div className="relative z-10 mt-12 md:mt-48 md:w-1/2 grid grid-cols-2 gap-4 pl-0 ml-0 justify-start">
           {/* doodle near mosaic */}
           <div className="absolute -top-8 left-2 flex items-center gap-2 text-xs text-zinc-300">
             <svg width="80" height="36" viewBox="0 0 80 36" fill="none" stroke="currentColor" className="opacity-70"><path d="M2 28 C26 6, 54 6, 78 24" strokeWidth="1.5"/></svg>
