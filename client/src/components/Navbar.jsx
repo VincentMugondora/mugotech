@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   return (
-    <div className="mx-auto max-w-6xl px-4 md:px-8 pt-0">
-      <div className="flex items-center justify-between h-12 text-zinc-300">
+    <div className="relative mx-auto max-w-full px-5 md:px-10 py-4 md:py-5 mb-5 bg-[#111111] shadow-[0_30px_80px_0_rgba(0,0,0,0.65)]">
+      <div className="flex items-center justify-between text-zinc-300">
         <a href="#" className="flex items-center gap-2 text-sm font-semibold">
           <span className="inline-grid place-items-center h-7 w-7 rounded-full bg-emerald-600">D</span>
           <span className="hidden sm:inline">digicraft</span>
@@ -23,8 +23,8 @@ export default function Navbar() {
         </div>
       </div>
       {open && (
-        <div className="md:hidden">
-          <nav className="px-1 py-3 flex flex-col gap-3 text-sm">
+        <div className="md:hidden bg-[#111111] border-t border-white/10">
+          <nav className="px-5 py-4 flex flex-col gap-3 text-sm">
             <a className="py-1" href="#services" onClick={() => setOpen(false)}>Services</a>
             <a className="py-1" href="#work" onClick={() => setOpen(false)}>Cases</a>
             <a className="py-1" href="#about" onClick={() => setOpen(false)}>About</a>

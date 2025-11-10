@@ -4,7 +4,7 @@ import Navbar from './Navbar.jsx'
 export default function Hero() {
   return (
     <section className="w-full px-0 pt-0 pb-10 md:pb-12">
-      <div className="relative overflow-hidden rounded-none border-0 bg-zinc-950 text-zinc-50">
+      <div className="relative overflow-hidden rounded-none border-0 bg-[#141414] text-zinc-50">
         <Navbar />
 
         {/* decorative bg */}
