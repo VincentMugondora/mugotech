@@ -38,10 +38,6 @@ const HeroSection = () => {
 
         {/* Right Image Section */}
         <div className="relative z-10 mt-12 md:mt-48 md:w-1/2 grid grid-cols-2 gap-4 pl-0 ml-0 justify-start">
-          {/* doodle near mosaic */}
-          <div className="absolute -top-8 left-2 flex items-center gap-2 text-xs text-zinc-300">
-            <svg width="80" height="36" viewBox="0 0 80 36" fill="none" stroke="currentColor" className="opacity-70"><path d="M2 28 C26 6, 54 6, 78 24" strokeWidth="1.5"/></svg>
-          </div>
           <div className="relative rounded-lg overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
