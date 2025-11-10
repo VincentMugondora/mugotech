@@ -6,14 +6,14 @@ const HeroSection = () => {
   return (
     <section className="bg-[#111111] text-white min-h-screen flex flex-col justify-between">
       {/* Navbar */}
-      <Navbar />
+      <Navbar className="z-10" />
 
       {/* Hero Content */}
       <div className="flex flex-col relative
       h-[90vh] md:flex-row justify-between items-center px-10 md:px-20 py-16">
         {/* decorative glow and cut-out */}
         {/* Left Text Section */}
-        <div className="relative z-10 max-w-xl space-y-6">
+        <div className="relative z-20 max-w-xl space-y-6">
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
             Elevate Your Business Through Online Marketing
           </h1>
@@ -36,31 +36,31 @@ const HeroSection = () => {
         </div>
 
         {/* Right Image Section */}
-        <div className="relative z-10 mt-12 md:mt-48 md:w-1/2 grid grid-cols-2 gap-4 pl-0 ml-0 justify-start">
+        <div className="relative z-0 mt-20 md:mt-48 md:w-1/2 grid grid-cols-2 gap-4 pl-0 ml-0 justify-start">
           {/* top shadow coming from navbar */}
-          <div className="pointer-events-none absolute -top-10 left-0 right-0 h-24 md:h-40 bg-linear-to-b from-black/40 via-black/10 to-transparent"></div>
-          <div className="relative rounded-lg overflow-hidden">
+          <div className="pointer-events-none absolute -top-10 left-0 right-0 h-28 md:h-48 z-0 bg-linear-to-b from-[#111111]/70 via-[#111111]/20 to-transparent"></div>
+          <div className="relative z-10 rounded-lg overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
               alt="Team work"
               className="object-cover w-full h-[60vh]"
             />
           </div>
-          <div className="relative rounded-lg overflow-hidden">
+          <div className="relative z-10 rounded-lg overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
               alt="Meeting"
               className="object-cover w-full h-[50vh]"
             />
           </div>
-          <div className="relative rounded-lg overflow-hidden">
+          <div className="relative z-10 rounded-lg overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1553877522-43269d4ea984"
               alt="Laptop"
               className="object-cover w-full h-[60vh]"
             />
           </div>
-          <div className="relative rounded-lg overflow-hidden -mt-[10vh]">
+          <div className="relative z-10 rounded-lg overflow-hidden -mt-[10vh]">
             <img
               src="https://images.unsplash.com/photo-1553877522-43269d4ea984"
               alt="Laptop"
