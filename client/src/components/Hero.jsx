@@ -34,10 +34,6 @@ const HeroSection = () => {
               <span>Watch Demo</span>
             </button>
           </div>
-
-          <p className="text-sm text-gray-500 italic mt-2">
-            Let’s start your journey here!
-          </p>
         </div>
 
         {/* Right Image Section */}
@@ -45,7 +41,6 @@ const HeroSection = () => {
           {/* doodle near mosaic */}
           <div className="absolute -top-8 left-2 flex items-center gap-2 text-xs text-zinc-300">
             <svg width="80" height="36" viewBox="0 0 80 36" fill="none" stroke="currentColor" className="opacity-70"><path d="M2 28 C26 6, 54 6, 78 24" strokeWidth="1.5"/></svg>
-            <span className="italic">Let’s start your journey here!</span>
           </div>
           <div className="relative rounded-lg overflow-hidden">
             <img
