@@ -1,72 +1,80 @@
-import React from 'react'
-import Navbar from './Navbar.jsx'
+import React from "react";
+import { FaPlay } from "react-icons/fa";
 
-export default function Hero() {
+const HeroSection = () => {
   return (
-    <section className="w-full px-0 pt-0 pb-10 md:pb-12">
-      <div className="relative overflow-hidden rounded-none border-0 bg-[#141414] text-zinc-50">
-        <Navbar />
+    <section className="bg-[#0b0c10] text-white min-h-screen flex flex-col justify-between">
+      {/* Navbar */}
+      <nav className="flex justify-between items-center px-10 py-6">
+        <div className="text-2xl font-bold text-green-400">Dgicraft</div>
+        <ul className="hidden md:flex space-x-8 text-gray-300">
+          <li><a href="#" className="hover:text-white">Home</a></li>
+          <li><a href="#" className="hover:text-white">About</a></li>
+          <li><a href="#" className="hover:text-white">Services</a></li>
+          <li><a href="#" className="hover:text-white">Cases</a></li>
+        </ul>
+        <button className="bg-green-400 hover:bg-green-500 text-black px-5 py-2 rounded-md font-semibold">
+          Get Started
+        </button>
+      </nav>
 
-        {/* decorative bg */}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_60%_at_0%_0%,rgba(16,185,129,.18),transparent_60%),radial-gradient(60%_50%_at_100%_0%,rgba(16,185,129,.10),transparent_65%)]" />
-        <div className="absolute -bottom-12 -right-12 h-28 w-28 sm:h-36 sm:w-36 rounded-tl-[160px] bg-white z-10" />
+      {/* Hero Content */}
+      <div className="flex flex-col md:flex-row justify-between items-center px-10 md:px-20 py-16">
+        {/* Left Text Section */}
+        <div className="max-w-xl space-y-6">
+          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+            Elevate Your Business <br /> Through Online Marketing
+          </h1>
+          <p className="text-gray-400">
+            Unlock the full potential of your business with Elevate Your Business through 
+            Online Marketing. In this transformative journey, we guide you through the 
+            dynamic landscape of digital strategies, unveiling the power of online 
+            marketing to propel your brand to new heights.
+          </p>
 
-        {/* content */}
-        <div className="relative z-20 px-4 md:px-8 pb-6 md:pb-10">
-          <div className="grid md:grid-cols-2 gap-6 items-center">
-            {/* text */}
-            <div className="py-4 md:py-8">
-              <h1 className="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight">
-                Elevate Your Business Through Online Marketing
-              </h1>
-              <p className="mt-4 text-zinc-300 max-w-xl">
-                Unlock the full potential of your business with Elevate Your Business through Online Marketing. In this transformative journey, we guide you through the dynamic landscape of digital strategies.
-              </p>
-              <div className="mt-6 flex flex-wrap items-center gap-3">
-                <a className="btn-primary" href="#contact">Get Started</a>
-                <a className="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold bg-white/5 hover:bg-white/10 text-zinc-50" href="#">
-                  <span className="inline-grid place-items-center h-6 w-6 rounded-full bg-white/10"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-                  Watch Demo
-                </a>
-              </div>
-            </div>
-
-            {/* mosaic */}
-            <div className="relative z-20 grid grid-cols-2 gap-2 sm:gap-3">
-              {/* doodle near mosaic */}
-              <div className="absolute -top-6 left-1 flex items-center gap-2 text-xs text-zinc-300">
-                <svg width="80" height="36" viewBox="0 0 80 36" fill="none" stroke="currentColor" className="opacity-70"><path d="M2 28 C26 6, 54 6, 78 24" strokeWidth="1.5"/></svg>
-                <span className="italic">Let’s start your journey here!</span>
-              </div>
-              <div className="relative rounded-xl overflow-hidden aspect-4/3 shadow-[0_10px_30px_rgba(0,0,0,0.45)]">
-                <img className="h-full w-full object-cover" src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1200&auto=format&fit=crop" alt="mosaic 1" />
-                <div className="absolute inset-0 bg-black/35" />
-              </div>
-              <div className="relative rounded-xl overflow-hidden aspect-4/3 shadow-[0_10px_30px_rgba(0,0,0,0.45)]">
-                <img className="h-full w-full object-cover" src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" alt="mosaic 2" />
-                <div className="absolute inset-0 bg-black/35" />
-              </div>
-              <div className="relative rounded-xl overflow-hidden aspect-4/3 shadow-[0_10px_30px_rgba(0,0,0,0.45)]">
-                <img className="h-full w-full object-cover" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1200&auto=format&fit=crop" alt="mosaic 3" />
-                <div className="absolute inset-0 bg-black/35" />
-              </div>
-              <div className="relative rounded-xl overflow-hidden aspect-4/3 shadow-[0_10px_30px_rgba(0,0,0,0.45)]">
-                <img className="h-full w-full object-cover" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="mosaic 4" />
-                <div className="absolute inset-0 bg-black/35" />
-              </div>
-            </div>
+          <div className="flex items-center space-x-4">
+            <button className="bg-green-400 hover:bg-green-500 text-black px-5 py-3 rounded-md font-semibold">
+              Get Started
+            </button>
+            <button className="flex items-center space-x-2 border border-gray-500 px-5 py-3 rounded-md hover:bg-gray-800">
+              <FaPlay className="text-green-400" />
+              <span>Watch Demo</span>
+            </button>
           </div>
+
+          <p className="text-sm text-gray-500 italic mt-2">
+            Let’s start your journey here!
+          </p>
+        </div>
+
+        {/* Right Image Section */}
+        <div className="mt-10 md:mt-0 md:w-1/2 grid grid-cols-2 gap-4">
+          <img
+            src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+            alt="Team work"
+            className="rounded-lg object-cover w-full h-56"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+            alt="Meeting"
+            className="rounded-lg object-cover w-full h-56"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1553877522-43269d4ea984"
+            alt="Laptop"
+            className="rounded-lg object-cover w-full h-56 col-span-2"
+          />
         </div>
       </div>
 
-      {/* logos row */}
-      <div className="px-1 md:px-2">
-        <div className="mx-auto max-w-5xl flex items-center justify-center gap-10 md:gap-16 py-6 text-zinc-500">
-          <span className="opacity-70">informa</span>
-          <span className="opacity-70">Microsoft</span>
-          <span className="opacity-70">logitech</span>
-        </div>
+      {/* Logos Section */}
+      <div className="flex justify-center space-x-12 py-8 bg-[#101218] text-gray-400">
+        <span className="text-lg">informa</span>
+        <span className="text-lg">Microsoft</span>
+        <span className="text-lg">logitech</span>
       </div>
     </section>
-  )
-}
+  );
+};
+
+export default HeroSection;
