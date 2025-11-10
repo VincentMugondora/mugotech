@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 const HeroSection = () => {
   return (
-    <section className="bg-[#0b0c10] text-white min-h-screen flex flex-col justify-between">
+    <section className="bg-[#111111] text-white min-h-screen flex flex-col justify-between">
       {/* Navbar */}
       <Navbar />
 
